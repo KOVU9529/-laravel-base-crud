@@ -8,7 +8,14 @@
 </head>
 <body>
     <header>
-        header
+       <ul>
+           <li>
+               <a href="{{route('home')}}">HomePage</a>
+           </li>
+           <li>
+            <a href="{{route('comics.index')}}">Fumetti</a>
+        </li>
+       </ul>
     </header>
     <main>
         @yield('main_content')
