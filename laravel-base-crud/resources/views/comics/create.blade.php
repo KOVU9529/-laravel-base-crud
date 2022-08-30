@@ -19,7 +19,7 @@
         </div>
         <div>
             <label for="price">Prezzo Fumetto</label>
-            <input type="text" id="price" name="price">
+            <input type="decimal" id="price" name="price">
         </div>
         <div>
             <label for="series">Serie Fumetto</label>
@@ -33,5 +33,6 @@
             <label for="type">Tipo Fumetto</label>
             <input type="text" id="type" name="type">
         </div>
+      <input type="submit" value="Salva">
     </form>
 @endsection
