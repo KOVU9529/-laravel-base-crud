@@ -6,23 +6,10 @@
             Titolo:{{$comic['title']}}
         </div> 
         <div>
-            Titolo:{{$comic['description']}}
-        </div> 
-        <div>
            <img src="{{$comic['thumb']}}" alt="">
         </div>  
         <div>
-            Titolo:{{$comic['price']}}
-        </div>  
-        <div>
-            Titolo:{{$comic['series']}}
+           <a href="{{route('comics.show',['comic' => $comic ->id])}}">Dettagli fumetto</a>
         </div> 
-        <div>
-            Titolo:{{$comic['sale_date']}}
-        </div> 
-        <div>
-            Titolo:{{$comic['type']}}
-        </div> 
-       
   @endforeach
 @endsection
