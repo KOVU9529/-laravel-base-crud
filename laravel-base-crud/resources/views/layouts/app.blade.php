@@ -13,7 +13,10 @@
                <a href="{{route('home')}}">HomePage</a>
            </li>
            <li>
-            <a href="{{route('comics.index')}}">Fumetti</a>
+               <a href="{{route('comics.index')}}">Fumetti</a>
+           </li>
+           <li>
+                <a href="{{route('comics.create')}}">Creazione Fumetti</a>
         </li>
        </ul>
     </header>
