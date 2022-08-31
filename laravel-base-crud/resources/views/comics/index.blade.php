@@ -10,6 +10,17 @@
       </div>  
       <div>
          <a href="{{route('comics.show',['comic' => $comic ->id])}}">Dettagli fumetto</a>
-      </div>   
+      </div>  
+      <div>
+         <a href="{{route('comics.edit',['comic' => $comic ->id])}}">Modifica fumetto</a>
+      </div>  
+      <div>
+         <form action="{{route('comics.destroy',['comic' => $comic ->id])}}" method="post">
+            @csrf
+            @method('DELETE')
+            <input type="submit" value="Elimina">
+         </form>
+      </div>
+        
   @endforeach
 @endsection

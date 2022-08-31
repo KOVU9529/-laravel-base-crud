@@ -39,19 +39,10 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|max:60',
-            'description' => 'required|max:60000',
-            'thumb' => 'required|max:60000',
-            'price' => 'required',
-            'series' => 'required|max:60',
-            'sale_date' => 'required',
-            'type' => 'required|max:60',
-        ]);
+        $request->validate($this->getValidation());
 
         $form_data = $request->all();
-        
-        $new_comic = new Comic();
+        //$new_comic = new Comic();
         //$new_comic->title = $form_data['title'];
         //$new_comic->description = $form_data['description'];
         //$new_comic->thumb = $form_data['thumb'];
@@ -88,7 +79,13 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $comic = Comic::findOrFail($id);
+        $data=[
+            'comic' => $comic,
+        ];
+
+        return view ('comics.edit', $data);
     }
 
     /**
@@ -100,7 +97,12 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate($this->getValidation());
+        $form_data = $request -> all();
+        
+        $comic_to_update = Comic::findOrFail ($id);
+        $comic_to_update -> update($form_data);
+        return redirect()-> route('comics.show', ['comic'=> $comic_to_update->id]);
     }
 
     /**
@@ -111,6 +113,21 @@ class ComicController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic_delete = Comic::findOrFail ($id);
+        $comic_delete -> delete();
+        return redirect()-> route('comics.index');
+       
+    }
+    public function getValidation()
+    {
+        return[
+            'title' => 'required|max:60',
+            'description' => 'required|max:60000',
+            'thumb' => 'required|max:60000',
+            'price' => 'required',
+            'series' => 'required|max:60',
+            'sale_date' => 'required',
+            'type' => 'required|max:20',
+        ];
     }
 }
