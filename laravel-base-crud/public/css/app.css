@@ -10,13 +10,15 @@ body {
 }
 
 header {
+  position: fixed;
   background-color: purple;
   width: 100%;
-  height: 200px;
+  height: 70px;
 }
 
 main {
   color: white;
+  padding: 10px;
 }
 
 ul {
@@ -40,13 +42,20 @@ a {
   text-decoration: none;
 }
 
+.f-title {
+  margin-top: 70px;
+  padding: 10px;
+}
+
 .card {
+  border-radius: 40px;
   width: 24%;
-  background-color: rgb(14, 15, 15);
+  background-color: black;
   text-align: center;
 }
 .card .titolo {
-  padding: 5px;
+  border-radius: 40px;
+  padding: 15px;
   background-color: purple;
 }
 
