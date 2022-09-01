@@ -1,26 +1,33 @@
 @extends('layouts.app')
 @section('main_content')
    <h1>Fumetti</h1>
-  @foreach ($comics as $comic)
-      <div>
-         Titolo:{{$comic['title']}}
-      </div> 
-      <div>
-         <img src="{{$comic['thumb']}}" alt="">
-      </div>  
-      <div>
-         <a href="{{route('comics.show',['comic' => $comic ->id])}}">Dettagli fumetto</a>
-      </div>  
-      <div>
-         <a href="{{route('comics.edit',['comic' => $comic ->id])}}">Modifica fumetto</a>
-      </div>  
-      <div>
-         <form action="{{route('comics.destroy',['comic' => $comic ->id])}}" method="post">
-            @csrf
-            @method('DELETE')
-            <input type="submit" value="Elimina">
-         </form>
-      </div>
+   <div class="container">
+      @foreach ($comics as $comic)
+  <div class="card">
+   <div class="titolo">
+      Titolo:{{$comic['title']}}
+   </div> 
+   <div>
+      <img src="{{$comic['thumb']}}" alt="">
+   </div>  
+   <div>
+      <a href="{{route('comics.show',['comic' => $comic ->id])}}">Dettagli fumetto</a>
+   </div>  
+   <div>
+      <a href="{{route('comics.edit',['comic' => $comic ->id])}}">Modifica fumetto</a>
+   </div>  
+   <div>
+      <form action="{{route('comics.destroy',['comic' => $comic ->id])}}" method="post">
+         @csrf
+         @method('DELETE')
+         <input type="submit" value="Elimina">
+      </form>
+   </div>
+  </div>
+     
         
   @endforeach
+
+   </div>
+  
 @endsection

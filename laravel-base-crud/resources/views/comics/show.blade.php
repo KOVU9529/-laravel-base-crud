@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('main_content')
-    <div class="card">
+    <div >
         <div>
             Titolo:{{$comic->title}}
         </div> 

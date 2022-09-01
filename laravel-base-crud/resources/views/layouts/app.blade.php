@@ -10,15 +10,15 @@
 <body>
     <header>
        <ul>
-           <li>
+            <li>
                <a href="{{route('home')}}">HomePage</a>
-           </li>
-           <li>
+            </li>
+            <li>
                <a href="{{route('comics.index')}}">Fumetti</a>
-           </li>
-           <li>
+            </li>
+            <li>
                 <a href="{{route('comics.create')}}">Creazione Fumetti</a>
-        </li>
+            </li>
        </ul>
     </header>
     <main>
