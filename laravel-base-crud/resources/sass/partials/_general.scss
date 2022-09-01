@@ -41,6 +41,11 @@ a{
 }
 
 //fumetti
+.best-title{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+}
 .f-title{
     margin-top: 70px;
     padding: 10px;
@@ -62,8 +67,12 @@ a{
     justify-content: space-between;
 }
 img{
+    border-radius: 40px;
     width: 280px;
     height: 350px;
+}
+img:hover{
+    transform: scale(1.1);
 }
 .info{
     background-color: rgb(0, 85, 255);
