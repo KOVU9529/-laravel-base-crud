@@ -54,6 +54,6 @@
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
-      <input type="submit" value="Salva">
+      <input class="create" type="submit" value="Salva">
     </form>
 @endsection

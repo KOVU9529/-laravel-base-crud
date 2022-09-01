@@ -10,17 +10,17 @@
    <div>
       <img src="{{$comic['thumb']}}" alt="">
    </div>  
-   <div>
-      <a href="{{route('comics.show',['comic' => $comic ->id])}}">Dettagli fumetto</a>
+   <div >
+      <a class="info" href="{{route('comics.show',['comic' => $comic ->id])}}">Dettagli fumetto</a>
    </div>  
-   <div>
-      <a href="{{route('comics.edit',['comic' => $comic ->id])}}">Modifica fumetto</a>
+   <div >
+      <a class="modifica" href="{{route('comics.edit',['comic' => $comic ->id])}}">Modifica fumetto</a>
    </div>  
-   <div>
+   <div >
       <form action="{{route('comics.destroy',['comic' => $comic ->id])}}" method="post">
          @csrf
          @method('DELETE')
-         <input type="submit" value="Elimina" onClick="return confirm('Sei sicuro di voler cancellare?');">
+         <input class="elimina" type="submit" value="Elimina" onClick="return confirm('Sei sicuro di voler cancellare?');">
       </form>
    </div>
   </div>

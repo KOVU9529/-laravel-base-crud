@@ -55,7 +55,7 @@
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
             </div>
-          <input type="submit" value="Salva">
+          <input class="confermaModifica" type="submit" value="Salva">
         </form>
     </div>
 @endsection
