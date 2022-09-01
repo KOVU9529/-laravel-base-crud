@@ -1,0 +1,48 @@
+body {
+  background-color: purple;
+}
+
+main {
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+img {
+  width: 280px;
+  height: 350px;
+}
+
+ul {
+  list-style-type: none;
+  background-color: black;
+}
+
+li {
+  text-decoration: none;
+  padding: 5px;
+}
+
+a {
+  background-color: purple;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.card {
+  background-color: aqua;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+a {
+  background-color: purple;
+  padding: 5px;
+}
+
+img {
+  padding: 5px;
+}

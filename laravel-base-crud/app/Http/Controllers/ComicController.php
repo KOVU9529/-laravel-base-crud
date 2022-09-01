@@ -42,7 +42,7 @@ class ComicController extends Controller
         $request->validate($this->getValidation());
 
         $form_data = $request->all();
-        //$new_comic = new Comic();
+        $new_comic = new Comic();
         //$new_comic->title = $form_data['title'];
         //$new_comic->description = $form_data['description'];
         //$new_comic->thumb = $form_data['thumb'];
