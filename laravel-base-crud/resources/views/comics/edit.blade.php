@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('main_content')
     <h1>Modifica fumetto</h1>
-   
     <div>
         <form action="{{route('comics.update' , ['comic' => $comic->id])}}" method="post">
             @csrf <!--sicurezza-->
