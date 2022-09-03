@@ -42,6 +42,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  font-weight: bold;
+}
+
 h1 {
   margin-top: 60px;
   padding: 10px;
@@ -54,7 +58,7 @@ h1 {
   text-align: center;
 }
 .card .titolo {
-  border-radius: 40px;
+  border-radius: 20px;
   padding: 15px;
   background-color: purple;
 }
@@ -66,9 +70,10 @@ h1 {
 }
 
 img {
-  border-radius: 40px;
+  border-radius: 20px;
   width: 280px;
   height: 350px;
+  margin-bottom: 10px;
 }
 
 img:hover {
@@ -91,9 +96,7 @@ img:hover {
 .modifica,
 .elimina {
   width: auto;
-  border-radius: 20px;
-  padding: 5px;
-  margin-bottom: 5px;
+  border-radius: 10px;
 }
 
 input {
@@ -112,6 +115,12 @@ textarea {
 input:first-of-type {
   background-color: white;
   color: black;
+}
+
+label {
+  padding: 5px;
+  background-color: purple;
+  margin-bottom: 10px;
 }
 
 div {
